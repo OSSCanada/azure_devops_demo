@@ -11,7 +11,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "default" {
   name     = "${var.AZURE_RESOURCE_GROUP_NAME}"
-  location = "${var.azure_dc_location}"
+  location = "${var.AZURE_DC_LOCATION}"
 }
 
 resource "azurerm_container_registry" "default" {
