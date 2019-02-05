@@ -13,7 +13,3 @@
   -backend-config="container_name=$AZUREBLOBSTORECONTAINERNAME" \
   -backend-config="access_key=$AZUREBLOBSTOREACCESSKEY" \
   -backend-config="key=$TFSTATEFILENAME"
-
-./terraform plan -out=tfplan -input=false
-
-./terraform apply "tfplan"
