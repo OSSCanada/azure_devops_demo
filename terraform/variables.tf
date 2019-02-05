@@ -1,44 +1,44 @@
-variable "azure_resource_group_name" {
+variable "AZURE_RESOURCE_GROUP_NAME" {
   default = "rkdevopsdemo"
 }
 
-variable "azure_dc_location" {
+variable "AZURE_DC_LOCATION" {
   default = "Canada Central"
 }
 
-variable "azure_app_service_plan_tier" {
+variable "AZURE_APP_SERVICE_PLAN_TIER" {
   default = "Standard"
 }
 
-variable "azure_app_service_plan_size" {
+variable "AZURE_APP_SERVICE_PLAN_SIZE" {
   default = "S1"
 }
 
-variable "azure_app_service_plan_kind" {
+variable "AZURE_APP_SERVICE_PLAN_KIND" {
   default = "Linux"
 }
 
-variable "azure_app_service_plan_reserved" {
+variable "AZURE_APP_SERVICE_PLAN_RESERVED" {
   default = "true"
 }
 
-variable "webapp_container_image_name" {
+variable "WEBAPP_CONTAINER_IMAGE_NAME" {
   default = "nginx"
 }
 
-variable "webapp_container_image_tag" {
+variable "WEBAPP_CONTAINER_IMAGE_TAG" {
   default = "latest"
 }
 
-variable "apiapp_container_image_name" {
+variable "APIAPP_CONTAINER_IMAGE_NAME" {
   default = "nginx"
 }
 
-variable "apiapp_container_image_tag" {
+variable "APIAPP_CONTAINER_IMAGE_TAG" {
   default = "latest"
 }
 
-variable "mongodb_connection_string" {
+variable "MONGODB_CONNECTION_STRING" {
   default = "mongodb://127.0.0.1:27017"
 }
 

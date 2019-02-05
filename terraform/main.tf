@@ -10,7 +10,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "default" {
-  name     = "${var.azure_resource_group_name}"
+  name     = "${var.AZURE_RESOURCE_GROUP_NAME}"
   location = "${var.azure_dc_location}"
 }
 
