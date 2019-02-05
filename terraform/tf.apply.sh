@@ -1,4 +1,4 @@
 #!/bin/bash
-chmod +x
+chmod +x terraform
 
 ./terraform apply -input=false -auto-approve "tfplan" 
