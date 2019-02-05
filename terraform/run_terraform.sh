@@ -8,14 +8,12 @@
 # export AZUREBLOBSTOREACCESSKEY=""
 # export TFSTATEFILENAME=""
 
-cd terraform
-
-terraform init \
+./terraform init \
   -backend-config="storage_account_name=$AZUREBLOBSTORAGEACCOUNTNAME" \
   -backend-config="container_name=$AZUREBLOBSTORECONTAINERNAME" \
   -backend-config="access_key=$AZUREBLOBSTOREACCESSKEY" \
   -backend-config="key=$TFSTATEFILENAME"
 
-terraform plan -out=tfplan -input=false
+./terraform plan -out=tfplan -input=false
 
-terraform apply "tfplan"
+./terraform apply "tfplan"

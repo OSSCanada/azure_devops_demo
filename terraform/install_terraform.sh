@@ -6,7 +6,5 @@ export TERRAFORMURL="https://releases.hashicorp.com/terraform/"$TERRAFORMVERSION
 apt update
 apt install -y unzip wget
 
-mkdir -p Downloads
-cd Downloads
 wget $TERRAFORMURL
 unzip $TERRAFORMZIPFILE
