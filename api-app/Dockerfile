@@ -4,6 +4,8 @@ WORKDIR /usr/src/app
 
 COPY src/ .
 
+EXPOSE 3000
+
 RUN npm install
 
 RUN npm start
