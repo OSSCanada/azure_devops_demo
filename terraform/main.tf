@@ -22,7 +22,7 @@ resource "azurerm_container_registry" "default" {
 }
 
 resource "azurerm_app_service_plan" "default" {
-  name                = "${var.app_service_plan_name}"
+  name                = "${azurerm_resource_group.default.name}-appserviceplan"
   location            = "${azurerm_resource_group.default.location}"
   resource_group_name = "${azurerm_resource_group.default.name}"
   kind                = "${var.azure_app_service_plan_kind}"
@@ -37,7 +37,7 @@ resource "azurerm_app_service_plan" "default" {
 
 # Create an Azure Web App for Containers in that App Service Plan
 resource "azurerm_app_service" "webapp" {
-  name                = "${azurerm_resource_group.default.name}wafc-webapp"
+  name                = "${azurerm_resource_group.default.name}wafc-web"
   location            = "${azurerm_resource_group.default.location}"
   resource_group_name = "${azurerm_resource_group.default.name}"
   app_service_plan_id = "${azurerm_app_service_plan.default.id}"
@@ -66,7 +66,7 @@ resource "azurerm_app_service" "webapp" {
 
 # Create an Azure Web App for Containers in that App Service Plan
 resource "azurerm_app_service" "apiapp" {
-  name                = "${azurerm_resource_group.default.name}-apiapp"
+  name                = "${azurerm_resource_group.default.name}wafc-api"
   location            = "${azurerm_resource_group.default.location}"
   resource_group_name = "${azurerm_resource_group.default.name}"
   app_service_plan_id = "${azurerm_app_service_plan.default.id}"

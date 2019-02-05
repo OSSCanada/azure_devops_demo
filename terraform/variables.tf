@@ -1,19 +1,3 @@
-# Defaults
-
-variable "azure_storage_account_name" {
-  default = "tfstorage"
-}
-
-variable "azure_storage_account_container_name" {
-  default = "tfbackend"
-}
-
-variable "terraform_key_name" {
-  default = "test.terraform.tfstate"
-}
-
-# Azure Specifics
-
 variable "azure_resource_group_name" {
   default = "rkdevopsdemo"
 }
@@ -21,11 +5,6 @@ variable "azure_resource_group_name" {
 variable "azure_dc_location" {
   default = "Canada Central"
 }
-
-variable "app_service_plan_name" {
-  default = "azure_devops_demo"
-}
-
 
 variable "azure_app_service_plan_tier" {
   default = "Standard"
