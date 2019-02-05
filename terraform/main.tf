@@ -1,11 +1,5 @@
 terraform {
   required_version = ">= 0.11.11"
-
-  backend "azurerm" {
-    storage_account_name = "rkadoinfraascode"
-    container_name       = "tfbackend"
-    key                  = "test.terraform.tfstate"
-  }
 }
 
 provider "azurerm" {
