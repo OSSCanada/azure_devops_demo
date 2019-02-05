@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./terraform apply "tfplan"
+./terraform apply -input=false tfplan -auto-approve
