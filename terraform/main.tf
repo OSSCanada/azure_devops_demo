@@ -27,13 +27,13 @@ resource "azurerm_app_service_plan" "default" {
   name                = "${azurerm_resource_group.default.name}-appserviceplan"
   location            = "${azurerm_resource_group.default.location}"
   resource_group_name = "${azurerm_resource_group.default.name}"
-  kind                = "${var.azure_app_service_plan_kind}"
+  kind                = "${var.AZURE_APP_SERVICE_PLAN_KIND}"
 
-  reserved = "${var.azure_app_service_plan_reserved}"
+  reserved = "${var.AZURE_APP_SERVICE_PLAN_RESERVED}"
 
   sku {
-    tier = "${var.azure_app_service_plan_tier}"
-    size = "${var.azure_app_service_plan_size}"
+    tier = "${var.AZURE_APP_SERVICE_PLAN_TIER}"
+    size = "${var.AZURE_APP_SERVICE_PLAN_SIZE}"
   }
 }
 
@@ -56,7 +56,7 @@ resource "azurerm_app_service" "webapp" {
 
   # Configure Docker Image to load on start
   site_config {
-    linux_fx_version = "DOCKER|${azurerm_container_registry.default.login_server}/${var.webapp_container_image_name}:${var.webapp_container_image_tag}"
+    linux_fx_version = "DOCKER|${azurerm_container_registry.default.login_server}/${var.WEBAPP_CONTAINER_IMAGE_NAME}:${var.WEBAPP_CONTAINER_IMAGE_TAG}"
     always_on        = "true"
   }
 
@@ -81,12 +81,12 @@ resource "azurerm_app_service" "apiapp" {
     DOCKER_REGISTRY_SERVER_URL      = "https://${azurerm_container_registry.default.login_server}"
     DOCKER_REGISTRY_SERVER_USERNAME = "${azurerm_container_registry.default.admin_username}"
     DOCKER_REGISTRY_SERVER_PASSWORD = "${azurerm_container_registry.default.admin_password}"
-    MONGODB_CONNECTION_STRING = "${var.mongodb_connection_string}"
+    MONGODB_CONNECTION_STRING = "${var.MONGODB_CONNECTION_STRING}"
   }
 
   # Configure Docker Image to load on start
   site_config {
-    linux_fx_version = "DOCKER|${azurerm_container_registry.default.login_server}/${var.apiapp_container_image_name}:${var.apiapp_container_image_tag}"
+    linux_fx_version = "DOCKER|${azurerm_container_registry.default.login_server}/${var.APIAPP_CONTAINER_IMAGE_NAME}:${var.APIAPP_CONTAINER_IMAGE_TAG}"
     always_on        = "true"
   }
 
