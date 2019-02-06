@@ -8,7 +8,3 @@ apt install -y unzip wget
 
 wget $TERRAFORMURL
 unzip $TERRAFORMZIPFILE
-
-ls -la
-
-whoami

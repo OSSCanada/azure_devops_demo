@@ -8,6 +8,8 @@
 # export AZUREBLOBSTOREACCESSKEY=""
 # export TFSTATEFILENAME=""
 
+ls -la
+
 chmod +x terraform
 
 ./terraform init \
