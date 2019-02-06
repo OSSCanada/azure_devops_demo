@@ -8,6 +8,8 @@
 # export AZUREBLOBSTOREACCESSKEY=""
 # export TFSTATEFILENAME=""
 
+chmod +x terraform
+
 ./terraform init \
   -input=false \
   -backend-config="storage_account_name=$AZUREBLOBSTORAGEACCOUNTNAME" \
