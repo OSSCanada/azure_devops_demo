@@ -1,19 +1,26 @@
 {
   "variables": {
-    "subscription_id": "{{}}",
-    "client_id" : "{{}}",
-    "client_secret": "{{}}"
+    "subscription_id": "{{env `AZ_SUBSCRIPTION_ID}}",
+    "tenant_id": "{{env `AZ_TENANT_ID`}}",
+
+    "client_id" : "{{env `AZ_CLIENT_ID`}}",
+    "client_secret": "{{env `AZ_CLIENT_SECRET`}}",
+    
+    "resource_group_name": "{{env `AZ_PACKER_RESOURCE_GROUP_NAME`}}",
+    "storage_account_name": "{{env `AZ_PACKER_STORAGE_ACCOUNT_NAME`}}"
   },
   "builders": [
     {
       "type": "azure-arm",
-    
-      "client_id": "fe354398-d7sf-4dc9-87fd-c432cd8a7e09",
-      "client_secret": "keepitsecret&#*$",
-      "resource_group_name": "packerdemo",
-      "storage_account": "virtualmachines",
-      "subscription_id": "44cae533-4247-4093-42cf-897ded6e7823",
-      "tenant_id": "de39842a-caba-497e-a798-7896aea43218",
+      
+      "subscription_id": "{{user `subscription_id`}}",
+      "tenant_id": "{{user `tenant_id`}",
+
+      "client_id": "{{user `client_id`}}",
+      "client_secret": "{{user `client_secret`}}",
+      
+      "resource_group_name": "{{user `resource_group_name`}}",
+      "storage_account": "{{user `storage_account_name`}}",
     
       "capture_container_name": "images",
       "capture_name_prefix": "packer",
