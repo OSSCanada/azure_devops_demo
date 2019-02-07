@@ -7,7 +7,17 @@
     "client_secret": "{{env `AZ_CLIENT_SECRET`}}",
     
     "resource_group_name": "{{env `AZ_PACKER_RESOURCE_GROUP_NAME`}}",
-    "storage_account_name": "{{env `AZ_PACKER_STORAGE_ACCOUNT_NAME`}}"
+    "storage_account_name": "{{env `AZ_PACKER_STORAGE_ACCOUNT_NAME`}}",
+
+    "capture_container_name": "{{env `AZ_CAPTURE_CONTAINER_NAME`}}",
+    "capture_name_prefix": "{{env `AZ_CAPTURE_NAME_PREFIX`}}",
+
+    "os_type": "{{env `AZ_OS_TYPE`}}",
+    "image_publisher": "{{env `AZ_IMAGE_PUBLISHER`}}",
+    "image_offer": "{{env `AZ_IMAGE_OFFER`}}",
+    "image_sku": "{{env `AZ_IMAGE_SKU`}}",
+    "location": "{{env `AZ_DC_LOCATION`}}",
+    "vm_size": "{{env `AZ_VM_SIZE`}}"
   },
   "builders": [
     {
@@ -25,17 +35,17 @@
       "capture_container_name": "images",
       "capture_name_prefix": "packer",
     
-      "os_type": "Linux",
-      "image_publisher": "Canonical",
-      "image_offer": "UbuntuServer",
-      "image_sku": "18.04-LTS",
+      "os_type": "{{user `os_type`}}",
+      "image_publisher": "{{user `image_publisher`}}",
+      "image_offer": "{{user `image_offer`}}",
+      "image_sku": "{{user `image_sku`}}",
     
       "azure_tags": {
         "dept": "engineering"
       },
     
-      "location": "Canada Central",
-      "vm_size": "DS2_v3"
+      "location": "{{user `location`}}",
+      "vm_size": "{{user `vm_size`}}"
     }
   ]
 }
