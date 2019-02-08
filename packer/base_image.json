@@ -1,17 +1,14 @@
 {
   "variables": {
-    "subscription_id": "{{env `AZ_SUBSCRIPTION_ID}}",
+    "subscription_id": "{{env `AZ_SUBSCRIPTION_ID`}}",
     "tenant_id": "{{env `AZ_TENANT_ID`}}",
 
     "client_id" : "{{env `AZ_CLIENT_ID`}}",
     "client_secret": "{{env `AZ_CLIENT_SECRET`}}",
     
-    "resource_group_name": "{{env `AZ_PACKER_RESOURCE_GROUP_NAME`}}",
-    "storage_account_name": "{{env `AZ_PACKER_STORAGE_ACCOUNT_NAME`}}",
-
-    "capture_container_name": "{{env `AZ_CAPTURE_CONTAINER_NAME`}}",
-    "capture_name_prefix": "{{env `AZ_CAPTURE_NAME_PREFIX`}}",
-
+    "managed_image_name": "{{env `AZ_MANAGED_IMAGE_NAME`}}-{{isotime \"2006-01-02-15h-04m\" }}",
+    "managed_image_resource_group_name": "{{env `AZ_PACKER_RESOURCE_GROUP_NAME`}}",
+    
     "os_type": "{{env `AZ_OS_TYPE`}}",
     "image_publisher": "{{env `AZ_IMAGE_PUBLISHER`}}",
     "image_offer": "{{env `AZ_IMAGE_OFFER`}}",
@@ -24,24 +21,21 @@
       "type": "azure-arm",
       
       "subscription_id": "{{user `subscription_id`}}",
-      "tenant_id": "{{user `tenant_id`}",
+      "tenant_id": "{{user `tenant_id`}}",
 
       "client_id": "{{user `client_id`}}",
       "client_secret": "{{user `client_secret`}}",
-      
-      "resource_group_name": "{{user `resource_group_name`}}",
-      "storage_account": "{{user `storage_account_name`}}",
-    
-      "capture_container_name": "images",
-      "capture_name_prefix": "packer",
-    
+
+      "managed_image_name": "{{user `managed_image_name`}}",
+      "managed_image_resource_group_name": "{{user `managed_image_resource_group_name`}}",
+     
       "os_type": "{{user `os_type`}}",
       "image_publisher": "{{user `image_publisher`}}",
       "image_offer": "{{user `image_offer`}}",
       "image_sku": "{{user `image_sku`}}",
     
       "azure_tags": {
-        "dept": "engineering"
+        "team": "devops"
       },
     
       "location": "{{user `location`}}",
