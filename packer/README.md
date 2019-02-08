@@ -1,7 +1,5 @@
 # Example - Packer Managed VM Image Build
 
-##
-
 ## Required settings
 
 ### Azure Service Principal
