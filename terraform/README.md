@@ -27,7 +27,7 @@ A Terraform State File is created to maintain and query the desired/presumed sta
 
 ## Required Variables
 
-The deployment assumes that the following variables are set and available in the command line prior to running a ```terraform init | plan | apply``` command(s).
+The deployment assumes that the following variables are set and available in the command line prior to running a ```terraform init | plan | apply``` command(s).  The naming of the variables are not all a requirement of Terraform, but the values are required and used inside Terraform templates and the Terraform Azure Provider.  You may rename them accordingly but ensure you update the ``variables.tf`` file and any other settings in the provided shell scripts.
 
 ```shell
 export ARM_CLIENT_ID="<Azure Service Principal ID aka APP ID aka CLIENT ID>"
