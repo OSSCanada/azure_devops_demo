@@ -47,3 +47,14 @@ export TERRAFORMVERSION="<Terraform version number to install into Linux env e.g
 - You can set a script that passes in these values at run time by passing the ```-var 'key=value'``` flag/syntax to your `terraform init | plan | apply` command(s).  this is the **highest** level of precedence
 - Azure DevOps will use/passin the Variables you define in a Pipeline into a Linux Environment.  However, the keys (names) you define in ADO will be uppercased automatically (i.e. ADO variable ```client_secret``` will be injected as ```CLIENT_SECRET``` in a linux shell environment)
 - When using environment variables in a Terraform template, you will need to match the case as noted above, as well as include a ```TF_VAR_``` prefix to your variable name. See [Terraform Environment Variables](https://www.terraform.io/docs/configuration/variables.html#environment-variables) for more details
+
+## Additional Resources
+
+- Get some [hands on](https://learn.hashicorp.com/terraform) learning about [Terraform](https://www.terraform.io/docs/)
+- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
+- [Azure DevOps](https://dev.azure.com)
+- [Azure App Services](https://docs.microsoft.com/en-us/azure/app-service/)
+- [Web App for Containers](https://docs.microsoft.com/en-us/azure/app-service/containers/)
+- [Azure Container Registry](https://docs.microsoft.com/en-us/azure/container-registry/)
+- [GitOps](https://www.weave.works/blog/gitops-operations-by-pull-request)
+- [Immutable Infrastructure](https://www.digitalocean.com/community/tutorials/what-is-immutable-infrastructure)
