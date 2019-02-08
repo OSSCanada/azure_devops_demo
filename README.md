@@ -1,8 +1,21 @@
 # Azure DevOps Demo
 
 ## Terraform
+### Branch Build status
+Master: ![Master Branch Build Status](https://dev.azure.com/osscanada/azure_devops_demo/_apis/build/status/TF%20Test%20Environment%20Build?branchName=master)
+
+Test: ![Test Branch Build Status](https://dev.azure.com/osscanada/azure_devops_demo/_apis/build/status/TF%20Test%20Environment%20Build?branchName=test)
 
 We'll be using Terraform as our declarative way to provision our services into each environment.
+
+## Packer
+
+### Branch Build status
+Master: ![Master Branch Build Status](https://dev.azure.com/osscanada/azure_devops_demo/_apis/build/status/Packer%20Test%20Build%20Pipeline?branchName=master)
+
+Test: ![Test Branch Build Status](https://dev.azure.com/osscanada/azure_devops_demo/_apis/build/status/Packer%20Test%20Build%20Pipeline?branchName=test)
+
+We'll be using Packer to create custom Managed Azure VM images to deploy some services in IaaS.
 
 ### Services
 - Azure App Service Plan

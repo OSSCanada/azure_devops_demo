@@ -1,5 +1,10 @@
 # Example Terraform Deployment Template
 
+### Branch Build status
+Master: ![Master Branch Build Status](https://dev.azure.com/osscanada/azure_devops_demo/_apis/build/status/TF%20Test%20Environment%20Build?branchName=master)
+
+Test: ![Test Branch Build Status](https://dev.azure.com/osscanada/azure_devops_demo/_apis/build/status/TF%20Test%20Environment%20Build?branchName=test)
+
 This example Terraform template is designed to demonstrate a simple Azure services deployment.  The goal is to iteratively update services (Adding/Removing/Updating) to declaratively modify the elastic scale of the services based on workload requirements/demands.  We will be using Git as the source of truth for our environment, which will give us an entry point as well as a simple and powerful access control model for sharing and collaboratively working on our infrastructure and required services (IaaS, PaaS and SaaS).  
 
 Our Operations team can declaratively define the services that need to be provisioned and deployed via Terrafrom templates.  Each operator will be added to a team(s) in Github which will define the level of access they have to the repository to affect change.

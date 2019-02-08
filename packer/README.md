@@ -1,5 +1,10 @@
 # Example - Packer Managed VM Image Build
 
+### Branch Build Status
+Master: ![Master Branch Build Status](https://dev.azure.com/osscanada/azure_devops_demo/_apis/build/status/Packer%20Test%20Build%20Pipeline?branchName=master)
+
+Test: ![Test Branch Build Status](https://dev.azure.com/osscanada/azure_devops_demo/_apis/build/status/Packer%20Test%20Build%20Pipeline?branchName=test)
+
 ## Required settings
 
 ### Azure Service Principal
