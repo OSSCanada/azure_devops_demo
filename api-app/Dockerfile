@@ -8,4 +8,4 @@ EXPOSE 3000
 
 RUN npm install
 
-RUN npm start
+CMD npm start
