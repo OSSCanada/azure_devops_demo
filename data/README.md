@@ -11,7 +11,7 @@ In this track, data flows from one pilar into the next taking on some form of mu
 
 While the deployment of data models is important and core to this track, the refinement of the model and tracking the iterative changes of it are not the responsibility of this track. Defining the requirements that can repeatably and reliable transform and deliver data **AND** serve the data model along side other applications in an organization's infrastructure are the primary responsibilities of this track.  In otherwords, how do we ensure we're laying down the pipes to ensure that data flows and is used/processed as it's intended to be, reliably and repeatedly?  It is more in alignment with an I.T Operator's (Database Administrator/Architect or Engineer) role/concerns than of an I.T Developer's (Data Developer/Scientist) role/concerns.
 
-- (2) **Data Development/Science Track** that allows Data Science Teams to iterate constantly on how to produce better analytics/predictions by developing new data models
+- (2) **Data Development/Science/Modeling Track** that allows Data Science Teams to iterate constantly on how to produce better analytics/predictions by developing new data models
 
 This track is primarily concerned with how the sepcific analytics model(s) for an organization are iteratively improved upon in quick incremental (aka Agile) cycles.  How can we leverage or consume the data we have access to in a better fashion and how can we become more accurate in predicting the outcome(s) we're attempting to measure?
 
